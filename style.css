@@ -1,0 +1,424 @@
+* {
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #1e272e;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px 0px;
+}
+
+/* "inline-block" for <a> here to allow the transform effect to work  */
+
+.navigation a {
+  display: inline-block;
+  color: #ffc048;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 40px;
+  transition: 0.7s ease;
+}
+
+.navigation a:hover {
+  color: #ffa801;
+  transform: scale(1.2);
+}
+
+/* Intro section starts */
+
+/* padding fo all sections */
+
+section {
+  padding: 100px 50px;
+}
+
+.intro {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(https://drive.google.com/uc?export=view&id=1aCzrgJNmTaAldnTQYHSeOKncKOD3Y7Pw)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position-x: 25em;
+  background-color: #1e272e;
+}
+
+.intro-paragraph,
+.intro-heading {
+  max-width: 45em;
+  padding: 5px 5px;
+}
+
+.intro-heading h2 {
+  color: #d2dae2;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+/* inline-block here to be able to apply margin on <span> */
+.intro-heading h2 span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffa801;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.intro-paragraph p {
+  color: #d2dae2;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+/* First section of the main content/my story/ */
+
+/* Title for all sections and flex because it's simpler and easer to use*/
+
+.story {
+  background-color: #1e272e;
+}
+
+.section-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ffa801;
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Flex for all sections to ensure symmetry throughout whole site, Row&Wrap to ensure that horizontal stacking is prevented when resizing*/
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* The image as the background of the container because it is the only element in this container and to avoid going into a lot of style codes in CSS*/
+
+.story-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1kNsmIC5glFHnngokJsPLUf66g3gz4e25)
+    no-repeat;
+  background-size: auto;
+}
+
+.story-paragraph {
+  max-width: 50em;
+  min-height: 31.25em;
+}
+
+.story-paragraph p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #d2dae2;
+  padding-left: 30px;
+  padding-top: 22px;
+}
+
+/*second section of the main content-theories*/
+
+/* I designed this section in the form of equal cards containing content and images, and specialized the content from the images in border and transform effect  */
+
+.theory-info-card,
+.theory-img-card {
+  /* border: solid 1px #0a0a0b;*/
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 15%);
+  max-width: 25em;
+  min-height: 31.25em;
+  margin: 50px 50px;
+  transition: 0.7s ease;
+  cursor: pointer;
+}
+
+.theory-info-card:hover {
+  transform: scale(1.1);
+}
+
+.theory-info-card {
+  border-left: #1e272e 40px solid;
+}
+
+.theory-title {
+  color: #ffc048;
+  font-size: 1em;
+  font-weight: 800;
+  text-align: center;
+  padding: 16px 45px;
+  text-transform: capitalize;
+}
+
+.theory-info-card p {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #1e272e;
+  padding: 5px 30px;
+}
+
+/* Image card for each theory */
+
+.s-relativity-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1xB_BpOxpTiVT8bUJyUyFFgX0F2grZVRG)
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-x: left;
+  border-radius: 10px;
+}
+
+.g-relativity-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1qlKfKdRDr4i0BZj0IG_KvGRPcJ1I7k9D)
+    no-repeat;
+  background-position: center;
+}
+
+.Electromagnetism-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1tOBbmWtyvO1LcrJlbfCBdb5lUMd86s6d)
+    no-repeat;
+  background-position: center;
+}
+
+.quantum-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1_ehmg_au8sDfWorhUf7MqrKN9vHnY41Q)
+    no-repeat;
+  background-position: center;
+}
+
+.photoelectric-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1E9GW9iZSb9fvwKJ9eistzrKm-CR9EfVM)
+    no-repeat;
+  background-position: center;
+}
+
+.cosmic-inflation-img {
+  width: 25em;
+  min-height: 31.25em;
+  background: url(https://drive.google.com/uc?export=view&id=1zUJt7B8Ss6nmKmRq2b3SSy3Pj8_MM-lO)
+    no-repeat;
+  background-size: cover;
+}
+
+/* Third section-Legacies*/
+
+.legacies-image {
+  margin: 20px auto;
+  width: 25em;
+  min-height: 17em;
+  overflow: hidden;
+  background: url(https://drive.google.com/uc?export=view&id=1jCZAVvLNHbcr3tlAcOR6L4Yf9YMGRj88)
+    no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.legacies-para {
+  width: 64em;
+  min-height: 9.25em;
+}
+
+.legacies-para p {
+  text-align: center;
+  color: #1e272e;
+  padding: 25px 25px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.legacies-para p span {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 22px;
+  color: #1e272e;
+}
+
+.below-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffc048;
+  background-color: #d2dae2;
+  border: #1e272e solid 1px;
+  border-radius: 6px;
+  padding: 0px 9px;
+  margin-left: 5px;
+  transition: 0.7s ease;
+}
+
+.below-btn:hover {
+  color: #ffa801;
+  transform: scale(1.2);
+}
+
+.Legacies-table table {
+  width: 64em;
+  min-height: 40em;
+  background-color: #fff;
+  margin-top: 80px;
+  border: #1e272e solid 1px;
+  border-left: solid 15px #1e272e;
+  border-top: solid 15px #1e272e;
+}
+
+.Legacies-table th,
+td {
+  text-align: left;
+  padding: 50px;
+  border: solid 2px #1e272e;
+}
+
+.Legacies-table th {
+  font-size: 17px;
+  font-weight: 900;
+  color: #ffc048;
+}
+
+.Legacies-table td {
+  color: #1e272e;
+  font-size: 14px;
+}
+
+.Legacies-table tr:hover {
+  background-color: #d2dae2;
+}
+
+/* Learning links section*/
+
+.learn-Physics {
+  min-height: 100vh;
+}
+
+.Inspiring-paragraph {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.Physics-source {
+  border: solid 1px #1e272e;
+  min-height: 27em;
+  width: 19em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+}
+
+.Physics-source:hover {
+  transform: scale(1.1);
+}
+
+.Physics-source:hover .source-image {
+  opacity: 0.9;
+}
+
+.source-image img {
+  width: 100%;
+  height: 14em;
+}
+
+.source-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*remember*/
+  padding: 1em;
+}
+
+.source-title {
+  color: #ffc048;
+  margin-bottom: 10px;
+}
+
+.source-description {
+  color: #1e272e;
+  font-size: 0.9em;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.visit {
+  text-decoration: none;
+  color: #ffc048;
+  background-color: #d2dae2;
+  border: #1e272e solid 1px;
+  border-radius: 6px;
+  padding: 1px 20px;
+  margin-top: 26px;
+  transition: 0.7s ease;
+}
+
+.visit:hover {
+  color: #ffa801;
+  transform: scale(1.3);
+}
+
+/*footer*/
+
+footer {
+  background-color: #1e272e;
+  color: #fff;
+  padding: 1.125em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.footer-title span {
+  color: #ffc048;
+}
+
+@media screen and (min-width: 412px) and (max-width: 915px) {
+  header {
+    width: 57%;
+    padding: 0px 55px;
+  }
+
+  .navigation a {
+    padding: 18px 13px;
+  }
+
+  .intro {
+    min-width: 411px;
+    padding-top: 247px;
+  }
+
+  .story {
+    width: 412px;
+  }
+}
